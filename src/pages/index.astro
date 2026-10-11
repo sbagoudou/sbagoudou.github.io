@@ -1,0 +1,27 @@
+---
+import Base from '../layouts/Base.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import Hero from '../components/Hero.astro';
+import FactStrip from '../components/FactStrip.astro';
+import Experience from '../components/Experience.astro';
+import Stack from '../components/Stack.astro';
+import EducationLanguages from '../components/EducationLanguages.astro';
+import ContactFooter from '../components/ContactFooter.astro';
+import { fullName, profile } from '../data/profile';
+
+const title = `${fullName} — ${profile.title}`;
+// First sentence of the intro keeps the description within ~160 characters.
+const description = `${fullName}, ${profile.title.toLowerCase()} in ${profile.location}. ${profile.intro.split('. ')[0]}.`;
+---
+
+<Base title={title} description={description}>
+  <SiteHeader />
+  <main id="main">
+    <Hero />
+    <FactStrip />
+    <Experience />
+    <Stack />
+    <EducationLanguages />
+  </main>
+  <ContactFooter />
+</Base>

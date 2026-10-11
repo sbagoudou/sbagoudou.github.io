@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Samir Bagoudou — Fullstack Software Engineer</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=Instrument+Serif:ital@0;1&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0;background:#ECECEE}
+a{color:#121417}a:hover{color:#2342D6}
+</style>
+</helmet>
+
+<div style="background: #ECECEE; color: #121417; font-family: 'Archivo', 'Helvetica Neue', sans-serif; min-height: 100vh">
+
+  <!-- NAV -->
+  <header style="max-width: 1280px; margin: 0 auto; padding: 28px 40px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+    <a href="#top" style="display: flex; align-items: center; gap: 12px; text-decoration: none; min-height: 44px">
+      <span style="width: 40px; height: 40px; border-radius: 50%; background: #121417; color: #ECECEE; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px; font-stretch: 112%; letter-spacing: 0.02em">SB</span>
+      <span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; color: #121417">samir.bagoudou</span>
+    </a>
+    <nav aria-label="Primary" style="display: flex; flex-wrap: wrap; align-items: center; gap: 4px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px">
+      <a href="#experience" style="padding: 12px 14px; text-decoration: none">Experience</a>
+      <a href="#stack" style="padding: 12px 14px; text-decoration: none">Stack</a>
+      <a href="#education" style="padding: 12px 14px; text-decoration: none">Education</a>
+      <a href="mailto:samir.bagoudou@gmail.com" style="margin-left: 8px; padding: 12px 20px; border-radius: 999px; background: #121417; color: #ECECEE; text-decoration: none">Get in touch</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="top" style="max-width: 1280px; margin: 0 auto; padding: 40px 40px 96px; display: flex; flex-wrap: wrap; gap: 56px; align-items: flex-end">
+    <div style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 36px">
+      <p style="margin: 0; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; letter-spacing: 0.04em; text-transform: uppercase; color: #4A4E55; display: flex; flex-wrap: wrap; gap: 10px; align-items: center">
+        <span style="width: 8px; height: 8px; border-radius: 50%; background: {{accent}}; display: inline-block"></span>
+        Fullstack Software Engineer · Yvelines, France
+      </p>
+      <h1 style="margin: 0; line-height: 0.86; letter-spacing: -0.03em">
+        <span style="display: block; font-weight: 900; font-stretch: 125%; font-size: clamp(72px, 10.5vw, 176px)">SAMIR</span>
+        <span style="display: block; font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-weight: 400; font-size: clamp(76px, 11vw, 184px); letter-spacing: -0.02em; color: {{accent}}">Bagoudou</span>
+      </h1>
+      <p style="margin: 0; max-width: 560px; font-size: 21px; line-height: 1.5; color: #2A2D33">
+        Software engineer since 2018, working across Java and its ecosystem. I love crafting elegant solutions to complex problems, with a passion for clean code and new technology.
+      </p>
+      <div style="display: flex; flex-wrap: wrap; gap: 12px">
+        <a href="mailto:samir.bagoudou@gmail.com" style="display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 24px; border-radius: 999px; background: {{accent}}; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 16px">
+          Start a conversation
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"></path></svg>
+        </a>
+        <a href="#experience" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 999px; border: 1px solid #121417; text-decoration: none; font-weight: 600; font-size: 16px">See my work</a>
+      </div>
+    </div>
+    <figure style="flex: 1 1 340px; max-width: 440px; margin: 0; display: flex; flex-direction: column; gap: 12px">
+      <img src="/_blob/0d16d170242b790622981f409472c203" alt="Portrait of Samir Bagoudou" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 30%; border-radius: 4px; display: block">
+      <figcaption style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; color: #4A4E55; display: flex; justify-content: space-between; gap: 12px">
+        <span>Fig. 01 — Samir</span><span>R&amp;D Engineer @ Vialink</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <!-- FACT STRIP -->
+  <section aria-label="At a glance" style="border-top: 1px solid #121417; border-bottom: 1px solid #121417">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 0 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr))">
+      <div style="padding: 28px 24px 28px 0; display: flex; flex-direction: column; gap: 6px">
+        <span style="font-weight: 800; font-stretch: 118%; font-size: 40px; letter-spacing: -0.02em">8+ yrs</span>
+        <span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; color: #4A4E55; text-transform: uppercase; letter-spacing: 0.04em">Shipping Java since 2018</span>
+      </div>
+      <div style="padding: 28px 24px; display: flex; flex-direction: column; gap: 6px; border-left: 1px solid #C4C6CB">
+        <span style="font-weight: 800; font-stretch: 118%; font-size: 40px; letter-spacing: -0.02em">Java 21</span>
+        <span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; color: #4A4E55; text-transform: uppercase; letter-spacing: 0.04em">Spring Boot 3 · Reactor</span>
+      </div>
+      <div style="padding: 28px 24px; display: flex; flex-direction: column; gap: 6px; border-left: 1px solid #C4C6CB">
+        <span style="font-weight: 800; font-stretch: 118%; font-size: 40px; letter-spacing: -0.02em">Angular 18</span>
+        <span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; color: #4A4E55; text-transform: uppercase; letter-spacing: 0.04em">TypeScript front ends</span>
+      </div>
+      <div style="padding: 28px 0 28px 24px; display: flex; flex-direction: column; gap: 6px; border-left: 1px solid #C4C6CB">
+        <span style="font-weight: 800; font-stretch: 118%; font-size: 40px; letter-spacing: -0.02em">Scrum Master</span>
+        <span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; color: #4A4E55; text-transform: uppercase; letter-spacing: 0.04em">Facilitating the team</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" style="max-width: 1280px; margin: 0 auto; padding: 120px 40px 40px; display: flex; flex-direction: column; gap: 48px">
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 16px">
+      <h2 style="margin: 0; font-weight: 800; font-stretch: 118%; font-size: clamp(44px, 5vw, 72px); letter-spacing: -0.03em; line-height: 1">Experience</h2>
+      <span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; color: #4A4E55">(03) roles · 2018 — now</span>
+    </div>
+
+    <div style="display: flex; flex-direction: column; border-top: 1px solid #121417">
+      <!-- Row 1 -->
+      <article style="padding: 36px 0; border-bottom: 1px solid #C4C6CB; display: flex; flex-wrap: wrap; gap: 24px 48px">
+        <span style="flex: 0 0 48px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; color: {{accent}}; padding-top: 10px">01</span>
+        <div style="flex: 999 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+          <div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 16px">
+            <h3 style="margin: 0; font-weight: 700; font-size: 32px; letter-spacing: -0.02em">R&amp;D Engineer</h3>
+            <span style="font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-size: 30px">at Vialink</span>
+          </div>
+          <p style="margin: 0; max-width: 640px; font-size: 17px; line-height: 1.6; color: #2A2D33">Building a KYC document management platform end to end — Spring Boot services, Angular front end, running on Kubernetes — while facilitating the team's Scrum ceremonies.</p>
+          <ul style="margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 10px 32px; font-size: 15px; line-height: 1.5; color: #2A2D33">
+            <li style="padding-left: 18px; border-top: 1px solid #D6D8DC; padding-top: 10px">Design and develop new features</li>
+            <li style="padding-left: 18px; border-top: 1px solid #D6D8DC; padding-top: 10px">Analyse and resolve production issues</li>
+            <li style="padding-left: 18px; border-top: 1px solid #D6D8DC; padding-top: 10px">Unit, integration and end-to-end testing</li>
+            <li style="padding-left: 18px; border-top: 1px solid #D6D8DC; padding-top: 10px">CI/CD pipeline setup and maintenance</li>
+            <li style="padding-left: 18px; border-top: 1px solid #D6D8DC; padding-top: 10px">Scrum Master for the team</li>
+            <li style="padding-left: 18px; border-top: 1px solid #D6D8DC; padding-top: 10px">Shape the technical vision</li>
+          </ul>
+        </div>
+        <div style="flex: 1 1 200px; display: flex; flex-direction: column; gap: 6px; align-items: flex-start; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; color: #4A4E55; padding-top: 10px">
+          <span style="color: #121417">10/2021 — Present</span>
+          <span>Paris · Full-time</span>
+        </div>
+      </article>
+
+      <!-- Row 2 -->
+      <article style="padding: 36px 0; border-bottom: 1px solid #C4C6CB; display: flex; flex-wrap: wrap; gap: 24px 48px">
+        <span style="flex: 0 0 48px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; color: {{accent}}; padding-top: 10px">02</span>
+        <div style="flex: 999 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+          <div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 16px">
+            <h3 style="margin: 0; font-weight: 700; font-size: 32px; letter-spacing: -0.02em">Software Engineer</h3>
+            <span style="font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-size: 30px">at Sopra Steria</span>
+          </div>
+          <p style="margin: 0; max-width: 640px; font-size: 17px; line-height: 1.6; color: #2A2D33">Turned client requirements into specifications and shipped features with full test documentation. Diagnosed production issues, kept continuous integration running on Jenkins and maintained Ansible scripts.</p>
+        </div>
+        <div style="flex: 1 1 200px; display: flex; flex-direction: column; gap: 6px; align-items: flex-start; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; color: #4A4E55; padding-top: 10px">
+          <span style="color: #121417">10/2018 — 09/2021</span>
+          <span>Paris · Full-time</span>
+        </div>
+      </article>
+
+      <!-- Row 3 -->
+      <article style="padding: 36px 0; border-bottom: 1px solid #121417; display: flex; flex-wrap: wrap; gap: 24px 48px">
+        <span style="flex: 0 0 48px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; color: {{accent}}; padding-top: 10px">03</span>
+        <div style="flex: 999 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+          <div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 16px">
+            <h3 style="margin: 0; font-weight: 700; font-size: 32px; letter-spacing: -0.02em">Fullstack Developer</h3>
+            <span style="font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-size: 30px">at Sopra Steria</span>
+          </div>
+          <p style="margin: 0; max-width: 640px; font-size: 17px; line-height: 1.6; color: #2A2D33">Engineering internship: analysed client requirements, wrote specifications, developed features with test documentation and fixed production bugs.</p>
+        </div>
+        <div style="flex: 1 1 200px; display: flex; flex-direction: column; gap: 6px; align-items: flex-start; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; color: #4A4E55; padding-top: 10px">
+          <span style="color: #121417">02/2018 — 09/2018</span>
+          <span>Paris · Internship</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- STACK (dark band) -->
+  <section id="stack" style="background: #121417; color: #ECECEE; margin-top: 96px">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 112px 40px; display: flex; flex-direction: column; gap: 56px">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px">
+        <h2 style="margin: 0; font-weight: 800; font-stretch: 118%; font-size: clamp(44px, 5vw, 72px); letter-spacing: -0.03em; line-height: 1">The <span style="font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-weight: 400; font-stretch: 100%">stack</span></h2>
+        <p style="margin: 0; max-width: 420px; font-size: 17px; line-height: 1.6; color: #B9BCC2">Java and Angular day to day, with Python and React close behind. Containerised, orchestrated, tested.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1px; background: #33363C; border: 1px solid #33363C">
+        <div style="background: #121417; padding: 32px; display: flex; flex-direction: column; gap: 20px">
+          <span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; color: #9DA1A8">/ Java ecosystem</span>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px; font-size: 15px">
+            <span style="padding: 8px 14px; border: 1px solid #4A4E55; border-radius: 999px">Java 21</span>
+            <span style="padding: 8px 14px; border: 1px solid #4A4E55; border-radius: 999px">Spring Boot 3</span>
+            <span style="padding: 8px 14px; border: 1px solid #4A4E55; border-radius: 999px">Spring Framework</span>
+            <span style="padding: 8px 14px; border: 1px solid #4A4E55; border-radius: 999px">REST · SOAP</span>
+            <span style="padding: 8px 14px; border: 1px solid #4A4E55; border-radius: 999px">Hibernate</span>
+            <span style="padding: 8px 14px; border: 1px solid #4A4E55; border-radius: 999px">Project Reactor</span>
+            <span style="padding: 8px 14px; border: 1px solid #4A4E55; border-radius: 999px">Tomcat</span>
+            <span style="padding: 8px 14px; border: 1px solid #4A4E55; border-radius: 999px">Lombok</span>
+            <span style="padding: 8px 14px; border: 1px solid #4A4E55; border-radius: 999px">Maven</span>
+          </div>
+        </div>
+        <div style="background: #121417; padding: 32px; display: flex; flex-direction: column; gap: 20px">
+          <span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; color: #9DA1A8">/ Frontend</span>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px; font-size: 15px">
+            <span style="padding: 8px 14px; border: 1px solid #4A4E55; border-radius: 999px">Angular 18</span>
+            <span style="padding: 8px 14px; border: 1px solid #4A4E55; border-radius: 999px">TypeScript</span>
+            <span style="padding: 8px 14px; border: 1px solid #4A4E55; border-radius: 999px">React</span>
+            <span style="padding: 8px 14px; border: 1px solid #4A4E55; border-radius: 999px">NPM</span>
+          </div>
+          <span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; color: #9DA1A8; margin-top: 12px">/ Also</span>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px; font-size: 15px">
+            <span style="padding: 8px 14px; border: 1px solid #4A4E55; border-radius: 999px">Python</span>
+          </div>
+        </div>
+        <div style="background: #121417; padding: 32px; display: flex; flex-direction: column; gap: 20px">
+          <span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; color: #9DA1A8">/ Data</span>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px; font-size: 15px">
+            <span style="padding: 8px 14px; border: 1px solid #4A4E55; border-radius: 999px">PostgreSQL</span>
+            <span style="padding: 8px 14px; border: 1px solid #4A4E55; border-radius: 999px">MySQL</span>
+            <span style="padding: 8px 14px; border: 1px solid #4A4E55; border-radius: 999px">MariaDB</span>
+            <span style="padding: 8px 14px; border: 1px solid #4A4E55; border-radius: 999px">Oracle</span>
+            <span style="padding: 8px 14px; border: 1px solid #4A4E55; border-radius: 999px">MongoDB</span>
+            <span style="padding: 8px 14px; border: 1px solid #4A4E55; border-radius: 999px">Liquibase</span>
+          </div>
+        </div>
+        <div style="background: #121417; padding: 32px; display: flex; flex-direction: column; gap: 20px">
+          <span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; color: #9DA1A8">/ Containers &amp; orchestration</span>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px; font-size: 15px">
+            <span style="padding: 8px 14px; border: 1px solid #4A4E55; border-radius: 999px">Docker</span>
+            <span style="padding: 8px 14px; border: 1px solid #4A4E55; border-radius: 999px">Kubernetes</span>
+          </div>
+        </div>
+        <div style="background: #121417; padding: 32px; display: flex; flex-direction: column; gap: 20px">
+          <span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; color: #9DA1A8">/ Tooling &amp; CI</span>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px; font-size: 15px">
+            <span style="padding: 8px 14px; border: 1px solid #4A4E55; border-radius: 999px">GitHub</span>
+            <span style="padding: 8px 14px; border: 1px solid #4A4E55; border-radius: 999px">Bitbucket</span>
+            <span style="padding: 8px 14px; border: 1px solid #4A4E55; border-radius: 999px">Jenkins</span>
+            <span style="padding: 8px 14px; border: 1px solid #4A4E55; border-radius: 999px">Ansible</span>
+            <span style="padding: 8px 14px; border: 1px solid #4A4E55; border-radius: 999px">SonarQube</span>
+            <span style="padding: 8px 14px; border: 1px solid #4A4E55; border-radius: 999px">JIRA</span>
+            <span style="padding: 8px 14px; border: 1px solid #4A4E55; border-radius: 999px">IntelliJ IDEA</span>
+          </div>
+        </div>
+        <div style="background: #121417; padding: 32px; display: flex; flex-direction: column; gap: 20px">
+          <span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; color: #9DA1A8">/ How I work</span>
+          <div style="display: flex; flex-direction: column; gap: 14px; font-size: 16px; line-height: 1.5">
+            <span><strong style="font-weight: 700">Teamwork</strong> <span style="color: #B9BCC2">— a strong team spirit.</span></span>
+            <span><strong style="font-weight: 700">Integration</strong> <span style="color: #B9BCC2">— quick to join new teams and projects.</span></span>
+            <span><strong style="font-weight: 700">Adaptability</strong> <span style="color: #B9BCC2">— at home in new environments.</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION + LANGUAGES -->
+  <section id="education" style="max-width: 1280px; margin: 0 auto; padding: 120px 40px; display: flex; flex-wrap: wrap; gap: 72px">
+    <div style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 32px">
+      <h2 style="margin: 0; font-weight: 800; font-stretch: 118%; font-size: clamp(36px, 4vw, 56px); letter-spacing: -0.03em; line-height: 1">Education</h2>
+      <div style="display: flex; flex-direction: column; border-top: 1px solid #121417">
+        <div style="padding: 24px 0; border-bottom: 1px solid #C4C6CB; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px">
+          <div style="display: flex; flex-direction: column; gap: 4px">
+            <span style="font-weight: 700; font-size: 20px">Engineering Degree, Computer Science</span>
+            <span style="font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-size: 20px; color: #2A2D33">Université de Technologie de Belfort-Montbéliard</span>
+          </div>
+          <span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; color: #4A4E55">2015 — 2018 · Belfort</span>
+        </div>
+        <div style="padding: 24px 0; border-bottom: 1px solid #C4C6CB; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px">
+          <div style="display: flex; flex-direction: column; gap: 4px">
+            <span style="font-weight: 700; font-size: 20px">Bachelor's (Year 2), Computer Science</span>
+            <span style="font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-size: 20px; color: #2A2D33">École Supérieure des Télécommunications du Bénin</span>
+          </div>
+          <span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; color: #4A4E55">2012 — 2014 · Cotonou</span>
+        </div>
+      </div>
+    </div>
+    <div style="flex: 1 1 320px; display: flex; flex-direction: column; gap: 32px">
+      <h2 style="margin: 0; font-weight: 800; font-stretch: 118%; font-size: clamp(36px, 4vw, 56px); letter-spacing: -0.03em; line-height: 1">Languages</h2>
+      <div style="display: flex; flex-direction: column; gap: 24px; border-top: 1px solid #121417; padding-top: 24px">
+        <div style="display: flex; flex-direction: column; gap: 10px">
+          <div style="display: flex; justify-content: space-between; font-size: 18px"><span style="font-weight: 700">French</span><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; color: #4A4E55">Native</span></div>
+          <div style="height: 4px; background: #D6D8DC; border-radius: 2px"><div style="width: 100%; height: 4px; background: {{accent}}; border-radius: 2px"></div></div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 10px">
+          <div style="display: flex; justify-content: space-between; font-size: 18px"><span style="font-weight: 700">English</span><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; color: #4A4E55">Fluent</span></div>
+          <div style="height: 4px; background: #D6D8DC; border-radius: 2px"><div style="width: 86%; height: 4px; background: {{accent}}; border-radius: 2px"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <footer style="background: {{accent}}; color: #FFFFFF">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 120px 40px 48px; display: flex; flex-direction: column; gap: 72px">
+      <div style="display: flex; flex-direction: column; gap: 32px">
+        <span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em">Contact</span>
+        <h2 style="margin: 0; font-weight: 900; font-stretch: 125%; font-size: clamp(52px, 8vw, 128px); letter-spacing: -0.035em; line-height: 0.92">Let's build<br><span style="font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-weight: 400; font-stretch: 100%">something</span> clean.</h2>
+        <a href="mailto:samir.bagoudou@gmail.com" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 14px; min-height: 56px; padding: 0 28px; border-radius: 999px; background: #FFFFFF; color: #121417; text-decoration: none; font-weight: 600; font-size: clamp(16px, 2vw, 22px)">
+          samir.bagoudou@gmail.com
+          <svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 12L12 4M5 4h7v7"></path></svg>
+        </a>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.45); font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px">
+        <span>Samir Bagoudou · Yvelines, France</span>
+        <div style="display: flex; flex-wrap: wrap; gap: 24px">
+          <a href="https://github.com/" style="color: #FFFFFF; min-height: 44px; display: inline-flex; align-items: center">GitHub [ADD URL]</a>
+          <a href="https://www.linkedin.com/" style="color: #FFFFFF; min-height: 44px; display: inline-flex; align-items: center">LinkedIn [ADD URL]</a>
+          <a href="#top" style="color: #FFFFFF; min-height: 44px; display: inline-flex; align-items: center">Back to top ↑</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#2342D6","options":["#2342D6","#C2410C","#0F766E","#121417"]},"$preview":{"width":1440,"height":4000}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { accent: this.props.accent ?? '#2342D6' };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+---
+import { profile } from '../data/profile';
+---
+
+<section class="facts" aria-label="At a glance">
+  <dl class="container grid">
+    {profile.facts.map((fact) => (
+      <div class="cell">
+        <dt class="mono label">{fact.label}</dt>
+        <dd class="value">{fact.value}</dd>
+      </div>
+    ))}
+  </dl>
+</section>
+
+<style>
+  .facts {
+    border-block: 1px solid var(--ink);
+  }
+
+  .grid {
+    margin-block: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .cell {
+    padding: 24px 0;
+    display: flex;
+    /* Value reads first visually; the label stays first for screen readers (dt before dd). */
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    gap: 6px;
+  }
+
+  .cell + .cell {
+    border-top: 1px solid var(--rule);
+  }
+
+  .value {
+    margin: 0;
+    font-weight: 800;
+    font-stretch: 118%;
+    font-size: var(--fs-fact);
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+  }
+
+  .label {
+    font-size: var(--fs-mono-small);
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  /* Two columns: dividers between pairs, a rule between the rows. */
+  @media (min-width: 560px) {
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cell {
+      padding: 28px 24px;
+    }
+
+    .cell + .cell {
+      border-top: 0;
+    }
+
+    .cell:nth-child(odd) {
+      padding-left: 0;
+    }
+
+    .cell:nth-child(even) {
+      border-left: 1px solid var(--rule);
+    }
+
+    .cell:nth-child(n + 3) {
+      border-top: 1px solid var(--rule);
+    }
+  }
+
+  /* Four across, as designed. */
+  @media (min-width: 1180px) {
+    .grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .cell:nth-child(n + 3) {
+      border-top: 0;
+    }
+
+    .cell + .cell {
+      padding-left: 24px;
+      border-left: 1px solid var(--rule);
+    }
+
+    .cell:last-child {
+      padding-right: 0;
+    }
+  }
+</style>

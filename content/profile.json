@@ -1,0 +1,171 @@
+{
+  "name": {
+    "first": "Samir",
+    "last": "Bagoudou"
+  },
+  "title": "Fullstack Software Engineer",
+  "location": "Yvelines, France",
+  "email": "samir.bagoudou@gmail.com",
+  "links": {
+    "github": "https://github.com/sbagoudou",
+    "linkedin": "https://linkedin.com/in/sbagoudou-dev"
+  },
+  "portrait": "assets/portrait.png",
+  "intro": "Software engineer since 2018, working across Java and its ecosystem. I love crafting elegant solutions to complex problems, with a passion for clean code and new technology.",
+  "facts": [
+    {
+      "value": "8+ yrs",
+      "label": "Shipping Java since 2018"
+    },
+    {
+      "value": "Java 25",
+      "label": "Spring Boot 4 · Reactor"
+    },
+    {
+      "value": "Angular 18",
+      "label": "TypeScript front ends"
+    },
+    {
+      "value": "Scrum Master",
+      "label": "Facilitating the team"
+    }
+  ],
+  "experience": [
+    {
+      "role": "R&D Engineer",
+      "company": "Vialink",
+      "start": "10/2021",
+      "end": "Present",
+      "place": "Paris",
+      "type": "Full-time",
+      "summary": "Building a KYC document management platform end to end — Spring Boot services, Angular front end, running on Kubernetes — while facilitating the team's Scrum ceremonies.",
+      "highlights": [
+        "Design and develop new features",
+        "Analyse and resolve production issues",
+        "Unit, integration and end-to-end testing",
+        "CI/CD pipeline setup and maintenance",
+        "Scrum Master for the team",
+        "Shape the technical vision"
+      ]
+    },
+    {
+      "role": "Software Engineer",
+      "company": "Sopra Steria",
+      "start": "10/2018",
+      "end": "09/2021",
+      "place": "Paris",
+      "type": "Full-time",
+      "summary": "Turned client requirements into specifications and shipped features with full test documentation. Diagnosed production issues, kept continuous integration running on Jenkins and maintained Ansible scripts.",
+      "highlights": []
+    },
+    {
+      "role": "Fullstack Developer",
+      "company": "Sopra Steria",
+      "start": "02/2018",
+      "end": "09/2018",
+      "place": "Paris",
+      "type": "Internship",
+      "summary": "Engineering internship: analysed client requirements, wrote specifications, developed features with test documentation and fixed production bugs.",
+      "highlights": []
+    }
+  ],
+  "stackIntro": "Java and Angular day to day, with Python and React close behind. Containerised, orchestrated, tested.",
+  "stack": [
+    {
+      "group": "Java ecosystem",
+      "items": [
+        "Java 25",
+        "Spring Boot 4",
+        "Spring Framework",
+        "REST · SOAP",
+        "Hibernate",
+        "Project Reactor",
+        "Tomcat",
+        "Lombok",
+        "Maven"
+      ]
+    },
+    {
+      "group": "Frontend",
+      "items": [
+        "Angular 18",
+        "TypeScript",
+        "React",
+        "NPM"
+      ],
+      "also": [
+        "Python"
+      ]
+    },
+    {
+      "group": "Data",
+      "items": [
+        "PostgreSQL",
+        "MySQL",
+        "MariaDB",
+        "Oracle",
+        "MongoDB",
+        "Liquibase"
+      ]
+    },
+    {
+      "group": "Containers & orchestration",
+      "items": [
+        "Docker",
+        "Kubernetes"
+      ]
+    },
+    {
+      "group": "Tooling & CI",
+      "items": [
+        "GitHub",
+        "Bitbucket",
+        "Jenkins",
+        "Ansible",
+        "SonarQube",
+        "JIRA",
+        "IntelliJ IDEA"
+      ]
+    }
+  ],
+  "softSkills": [
+    {
+      "name": "Teamwork",
+      "text": "a strong team spirit."
+    },
+    {
+      "name": "Integration",
+      "text": "quick to join new teams and projects."
+    },
+    {
+      "name": "Adaptability",
+      "text": "at home in new environments."
+    }
+  ],
+  "education": [
+    {
+      "degree": "Engineering Degree, Computer Science",
+      "school": "Université de Technologie de Belfort-Montbéliard",
+      "years": "2015 — 2018",
+      "city": "Belfort"
+    },
+    {
+      "degree": "Bachelor's (Year 2), Computer Science",
+      "school": "École Supérieure des Télécommunications du Bénin",
+      "years": "2012 — 2014",
+      "city": "Cotonou"
+    }
+  ],
+  "languages": [
+    {
+      "name": "French",
+      "level": "Native",
+      "percent": 100
+    },
+    {
+      "name": "English",
+      "level": "Fluent",
+      "percent": 86
+    }
+  ]
+}

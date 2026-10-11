@@ -1,0 +1,50 @@
+/* Design tokens, from design/tokens.json. */
+:root {
+  /* Accent: swap for one of the alternatives in tokens.json — #C2410C, #0F766E or #121417. */
+  --accent: #2342d6;
+  --on-accent: #ffffff;
+
+  --ground: #ececee;
+  --ink: #121417;
+  --ink-soft: #2a2d33;
+  --muted: #4a4e55;
+  --rule: #c4c6cb;
+  --rule-light: #d6d8dc;
+
+  --dark-ground: #121417;
+  --dark-text: #ececee;
+  --dark-text-soft: #b9bcc2;
+  --dark-label: #9da1a8;
+  --dark-rule: #33363c;
+  --dark-chip-border: #4a4e55;
+
+  --focus-ring: var(--ink);
+
+  /* Fonts */
+  --font-display: 'Archivo Variable', 'Archivo', 'Helvetica Neue', Arial, sans-serif;
+  --font-serif: 'Instrument Serif', Georgia, 'Times New Roman', serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  /* Type scale */
+  --fs-hero-first: clamp(72px, 10.5vw, 176px);
+  --fs-hero-last: clamp(76px, 11vw, 184px);
+  --fs-h2: clamp(44px, 5vw, 72px);
+  --fs-h2-small: clamp(36px, 4vw, 56px);
+  --fs-contact: clamp(40px, 8vw, 128px);
+  --fs-role: clamp(26px, 2.6vw, 32px);
+  --fs-company: clamp(24px, 2.4vw, 30px);
+  --fs-fact: clamp(32px, 3vw, 40px);
+  --fs-lead: clamp(18px, 1.5vw, 21px);
+  --fs-body: 17px;
+  --fs-small: 15px;
+  --fs-mono: 13px;
+  --fs-mono-small: 12px;
+
+  /* Layout */
+  --max-width: 1280px;
+  --gutter: clamp(20px, 4vw, 40px);
+  --section-y: clamp(72px, 9vw, 120px);
+  --radius-pill: 999px;
+  --radius-image: 4px;
+  --touch: 44px;
+}

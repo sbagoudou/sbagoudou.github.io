@@ -1,0 +1,134 @@
+---
+import { profile } from '../data/profile';
+---
+
+<section id="stack" class="stack" aria-labelledby="stack-heading">
+  <div class="container inner">
+    <div class="head">
+      <h2 id="stack-heading" class="heading">The <span class="serif">stack</span></h2>
+      <p class="intro">{profile.stackIntro}</p>
+    </div>
+
+    <div class="grid">
+      {profile.stack.map((group) => (
+        <div class="cell">
+          <h3 class="mono label">/ {group.group}</h3>
+          <ul class="chips">
+            {group.items.map((item) => <li>{item}</li>)}
+          </ul>
+          {group.also && group.also.length > 0 && (
+            <>
+              <h4 class="mono label also">/ Also</h4>
+              <ul class="chips">
+                {group.also.map((item) => <li>{item}</li>)}
+              </ul>
+            </>
+          )}
+        </div>
+      ))}
+      <div class="cell">
+        <h3 class="mono label">/ How I work</h3>
+        <ul class="skills">
+          {profile.softSkills.map((skill) => (
+            <li>
+              <strong>{skill.name}</strong> <span>— {skill.text}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .stack {
+    background: var(--dark-ground);
+    color: var(--dark-text);
+    margin-top: clamp(56px, 7vw, 96px);
+  }
+
+  .inner {
+    padding-block: clamp(72px, 9vw, 112px);
+    display: flex;
+    flex-direction: column;
+    gap: clamp(36px, 4.5vw, 56px);
+  }
+
+  .head {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 24px;
+  }
+
+  .intro {
+    max-width: 420px;
+    font-size: var(--fs-body);
+    line-height: 1.6;
+    color: var(--dark-text-soft);
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+    gap: 1px;
+    padding: 1px;
+  }
+
+  /* Rules drawn per cell, so empty grid slots stay dark instead of showing the rule colour. */
+  .cell {
+    outline: 1px solid var(--dark-rule);
+    padding: clamp(24px, 2.5vw, 32px);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .label {
+    margin: 0;
+    font-size: var(--fs-mono-small);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--dark-label);
+  }
+
+  .also {
+    margin-top: 12px;
+  }
+
+  .chips {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: var(--fs-small);
+    line-height: 1.2;
+  }
+
+  .chips li {
+    padding: 8px 14px;
+    border: 1px solid var(--dark-chip-border);
+    border-radius: var(--radius-pill);
+  }
+
+  .skills {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .skills strong {
+    font-weight: 700;
+  }
+
+  .skills span {
+    color: var(--dark-text-soft);
+  }
+</style>

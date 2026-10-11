@@ -1,0 +1,138 @@
+---
+import { profile } from '../data/profile';
+---
+
+<section id="education" class="container education" aria-label="Education and languages">
+  <div class="column wide">
+    <h2 class="heading small">Education</h2>
+    <ul class="schools">
+      {profile.education.map((ed) => (
+        <li>
+          <div class="degree">
+            <h3>{ed.degree}</h3>
+            <p class="serif school">{ed.school}</p>
+          </div>
+          <p class="mono meta">{ed.years} · {ed.city}</p>
+        </li>
+      ))}
+    </ul>
+  </div>
+
+  <div class="column narrow">
+    <h2 class="heading small">Languages</h2>
+    <ul class="languages">
+      {profile.languages.map((lang) => (
+        <li>
+          <div class="lang-head">
+            <h3>{lang.name}</h3>
+            <span class="mono meta">{lang.level}</span>
+          </div>
+          <div class="bar" aria-hidden="true">
+            <span style={`width: ${Math.max(0, Math.min(100, lang.percent))}%`}></span>
+          </div>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
+
+<style>
+  .education {
+    padding-block: var(--section-y);
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(56px, 6vw, 72px);
+  }
+
+  .column {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .wide {
+    flex: 999 1 560px;
+    min-width: 0;
+  }
+
+  .narrow {
+    flex: 1 1 320px;
+  }
+
+  .heading.small {
+    font-size: var(--fs-h2-small);
+  }
+
+  ul {
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid var(--ink);
+  }
+
+  .schools li {
+    padding: 24px 0;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 8px 24px;
+  }
+
+  .degree {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  h3 {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.25;
+  }
+
+  .school {
+    font-size: 20px;
+    line-height: 1.25;
+    color: var(--ink-soft);
+  }
+
+  .meta {
+    color: var(--muted);
+  }
+
+  .languages {
+    padding-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .languages li {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .lang-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .lang-head h3 {
+    font-size: 18px;
+  }
+
+  .bar {
+    height: 4px;
+    background: var(--rule-light);
+    border-radius: 2px;
+  }
+
+  .bar span {
+    display: block;
+    height: 100%;
+    background: var(--accent);
+    border-radius: 2px;
+  }
+</style>

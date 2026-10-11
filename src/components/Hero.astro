@@ -1,0 +1,192 @@
+---
+import { getImage } from 'astro:assets';
+import { fullName, mailto, portrait, profile } from '../data/profile';
+
+const current = profile.experience[0];
+
+// 4:5 crop of the square portrait. AVIF holds up at a lower quality setting than WebP,
+// so each format gets its own; <Picture> would force one value on all three.
+const width = 800;
+const height = 1000;
+const widths = [360, 480, 690, 800];
+// Mirrors the figure column below: clamp(240px, 27vw, 345px) from 640px up, full width under it.
+const sizes = '(min-width: 1280px) 345px, (min-width: 889px) 27vw, (min-width: 640px) 240px, calc(100vw - 40px)';
+const crop = { src: portrait, width, height, widths, fit: 'cover', position: 'center' } as const;
+const [avif, webp, jpg] = await Promise.all([
+  getImage({ ...crop, format: 'avif', quality: 52 }),
+  getImage({ ...crop, format: 'webp', quality: 76 }),
+  getImage({ ...crop, format: 'jpg', quality: 78 }),
+]);
+---
+
+<section class="container hero" aria-labelledby="hero-name">
+  <div class="intro">
+    <p class="mono kicker">
+      <span class="dot" aria-hidden="true"></span>
+      <span>{profile.title} · {profile.location}</span>
+    </p>
+    <h1 id="hero-name">
+      <span class="first">{profile.name.first.toUpperCase()}</span>
+      <span class="last serif">{profile.name.last}</span>
+    </h1>
+    <p class="lead">{profile.intro}</p>
+    <div class="actions">
+      <a class="pill primary" href={mailto}>
+        Start a conversation
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+          <path d="M3 8h10M9 4l4 4-4 4"></path>
+        </svg>
+      </a>
+      <a class="pill secondary" href="#experience">See my work</a>
+    </div>
+  </div>
+
+  <figure class="portrait">
+    <picture>
+      <source type="image/avif" srcset={avif.srcSet.attribute} sizes={sizes} />
+      <source type="image/webp" srcset={webp.srcSet.attribute} sizes={sizes} />
+      <img
+        src={jpg.src}
+        srcset={jpg.srcSet.attribute}
+        sizes={sizes}
+        width={width}
+        height={height}
+        alt={`Portrait of ${fullName}`}
+        fetchpriority="high"
+        decoding="async"
+      />
+    </picture>
+    <figcaption class="mono">
+      <span>Fig. 01 — {profile.name.first}</span>
+      {current && <span>{current.role} @ {current.company}</span>}
+    </figcaption>
+  </figure>
+</section>
+
+<style>
+  .hero {
+    padding-top: clamp(16px, 3vw, 40px);
+    padding-bottom: clamp(64px, 7vw, 96px);
+    display: grid;
+    gap: 48px;
+  }
+
+  /* Side by side from tablet up; the portrait column scales with the viewport. */
+  @media (min-width: 640px) {
+    .hero {
+      grid-template-columns: minmax(0, 1fr) clamp(240px, 27vw, 345px);
+      gap: clamp(32px, 4vw, 56px);
+      align-items: end;
+    }
+  }
+
+  .intro {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(28px, 3vw, 36px);
+  }
+
+  .kicker {
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+  }
+
+  .dot {
+    flex: none;
+    width: 8px;
+    height: 8px;
+    transform: translateY(-1px);
+    border-radius: 50%;
+    background: var(--accent);
+  }
+
+  h1 {
+    line-height: 0.86;
+    letter-spacing: -0.03em;
+  }
+
+  .first,
+  .last {
+    display: block;
+  }
+
+  .first {
+    font-weight: 900;
+    font-stretch: 125%;
+    font-size: var(--fs-hero-first);
+  }
+
+  .last {
+    font-size: var(--fs-hero-last);
+    letter-spacing: -0.02em;
+    color: var(--accent);
+  }
+
+  .lead {
+    max-width: 560px;
+    font-size: var(--fs-lead);
+    line-height: 1.5;
+    color: var(--ink-soft);
+  }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .primary {
+    background: var(--accent);
+    color: var(--on-accent);
+  }
+
+  .primary:hover {
+    background: color-mix(in srgb, var(--accent) 82%, black);
+    color: var(--on-accent);
+  }
+
+  .secondary {
+    border-color: var(--ink);
+    color: var(--ink);
+  }
+
+  .secondary:hover {
+    background: var(--ink);
+    color: var(--ground);
+  }
+
+  .portrait {
+    max-width: 440px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .portrait img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: 50% 30%;
+    border-radius: var(--radius-image);
+    background: #e2e2e5;
+  }
+
+  figcaption {
+    font-size: var(--fs-mono-small);
+    color: var(--muted);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 4px 12px;
+  }
+
+  figcaption span {
+    white-space: nowrap;
+  }
+</style>

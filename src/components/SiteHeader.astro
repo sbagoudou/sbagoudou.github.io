@@ -1,0 +1,125 @@
+---
+import { mailto, profile } from '../data/profile';
+
+const handle = `${profile.name.first}.${profile.name.last}`.toLowerCase();
+const initials = `${profile.name.first[0]}${profile.name.last[0]}`;
+const nav = [
+  { label: 'Experience', href: '#experience' },
+  { label: 'Stack', href: '#stack' },
+  { label: 'Education', href: '#education' },
+];
+---
+
+<header id="top" class="container site-header">
+  <a class="brand" href="#top">
+    <span class="monogram" aria-hidden="true">{initials}</span>
+    <span class="mono handle">{handle}</span>
+  </a>
+  <nav aria-label="Primary" class="mono">
+    <ul>
+      {nav.map((item) => (
+        <li>
+          <a class="nav-link" href={item.href}>{item.label}</a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+  <a class="mono cta" href={mailto}>Get in touch</a>
+</header>
+
+<style>
+  .site-header {
+    padding-block: 28px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px 12px;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-height: var(--touch);
+    margin-right: auto;
+    text-decoration: none;
+  }
+
+  .monogram {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--ink);
+    color: var(--ground);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 14px;
+    font-stretch: 112%;
+    letter-spacing: 0.02em;
+  }
+
+  .handle {
+    color: var(--ink);
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .nav-link,
+  .cta {
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--touch);
+    text-decoration: none;
+  }
+
+  .nav-link {
+    padding: 0 14px;
+  }
+
+  .cta {
+    padding: 0 20px;
+    border-radius: var(--radius-pill);
+    background: var(--ink);
+    color: var(--ground);
+    transition: background-color 160ms ease;
+  }
+
+  .cta:hover {
+    background: var(--accent);
+    color: var(--on-accent);
+  }
+
+  /* Narrow: brand and CTA share the first row, section links get their own. */
+  @media (max-width: 640px) {
+    .site-header {
+      padding-block: 16px 8px;
+    }
+
+    nav {
+      order: 1;
+      width: 100%;
+    }
+
+    ul {
+      gap: 0;
+      margin-left: -10px;
+    }
+
+    .nav-link {
+      padding: 0 10px;
+    }
+
+    .cta {
+      padding: 0 16px;
+    }
+  }
+</style>
