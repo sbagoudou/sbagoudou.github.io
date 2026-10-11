@@ -2,7 +2,7 @@
 
 A one-page personal portfolio, built as a fully static site with [Astro](https://astro.build). It ships plain HTML and CSS with no client-side JavaScript. All copy comes from [`content/profile.json`](content/profile.json).
 
-The original design handoff is kept in [`BRIEF.md`](BRIEF.md) and [`design/`](design/). `design/reference.html` is the visual source of truth.
+The original design handoff is kept in [`design/`](design/). `design/reference.html` is the visual source of truth.
 
 ## Requirements
 
@@ -85,8 +85,3 @@ src/
 - Text meets WCAG AA contrast.
 - Smooth anchor scrolling and hover transitions are turned off under `prefers-reduced-motion`.
 - Lighthouse on the production build at handoff: Performance 99 (mobile) / 100 (desktop), and 100 for Accessibility, Best Practices and SEO.
-
-## Open items
-
-- The phone number from the CV is intentionally left off the public site.
-- A projects/case-studies section could reuse the experience row pattern.
